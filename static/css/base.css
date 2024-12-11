@@ -1,0 +1,134 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  background-color: #e6e3eb;
+  scroll-behavior: smooth;
+}
+#topo i {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d94a56;
+  color: #171717;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#topo a {
+  text-decoration: none;
+  color: red;
+}
+header {
+  margin-bottom: 5em;
+  display: flex;
+}
+.Navbar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+  background-color: #1b1d1e;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+}
+.links li a {
+  color: #f3f3f3;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 0.06em;
+}
+.links li a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #d94a56; /* Cor da linha */
+  transform: scaleX(0); /* Inicialmente, a linha está invisível */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.links li a:hover::before {
+  transform: scaleX(1); /* Quando o mouse passa sobre o link, a linha cresce */
+}
+.rede-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.rede-social i {
+  color: #f3f3f3;
+  font-size: 1.8em;
+  transition: all 0.3s ease-in;
+}
+.rede-social i:hover {
+  color: #d94a56;
+}
+/* Estilos para o rodapé */
+footer {
+  color: #fff;
+  background-color: #1b1d1e;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.content-contato-desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contato {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.contato .title-contact {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.contato p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 0.2em;
+  font-size: 1em;
+}
+
+.direitos-autorais{
+  font-size: .9em;
+  width: 100%;
+  text-align: center;
+}
+.desc-footer span{
+  color: #d94a56;
+  font-size: 1.2em;
+  font-weight: bold;
+}

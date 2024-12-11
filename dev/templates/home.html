@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block title%}
+<title>Home</title>
+{% endblock %}
+
+{% block content %}
+<section class="section-1">
+    <div class="content-img-desc">
+        <div class="content-img">
+            <h1>Dev Fullstack</h1>
+            <img src="{% static 'img/img-dev2.jpeg' %}" alt="perfil">
+            <a href="https://drive.google.com/file/d/1amMgno86IweOaa7gmusi8edHHXt94tnN/view?usp=drivesdk"
+                target="_blank"><button>Baixar Currículo<i class="fas fa-download"></i></button></a>
+        </div>
+        <div class="content-desc">
+            <p>Olá, meu nome é Wemerson Taylon, tenho 18 anos e sou um desenvolvedor fullstack. Possuo dois anos de
+                experiência trabalhando com diversas linguagens, incluindo
+                <span class="highlighted">HTML</span>,
+                <span class="highlighted">CSS</span>,
+                <span class="highlighted">JavaScript</span>
+                e
+                <span class="highlighted">Python</span>.
+                Além disso, tenho formação em Informática para Internet.
+            </p>
+        </div>
+        <div></div>
+    </div>
+    <div class="content-competencias">
+        <h1>Competências</h1>
+        <ul>
+            <li>Linguagens de programação</li>
+            <li>Bancos de Dados</li>
+            <li>Controle de Versão</li>
+            <li>Sistemas Operacionais</li>
+            <li>Conhecimentos em Redes e Protocolos</li>
+            <li>Lógica de Programação</li>
+            <li>Debugging e Troubleshooting</li>
+            <li>Pensamento Analítico</li>
+            <li>Segurança da Informação em Desenvolvimento</li>
+            <li>Automação de Testes</li>
+        </ul>
+    </div>
+</section>
+<section class="section-2">
+    <h1 class="title-section" id="projetos">Principais Projetos</h1>
+    <div class="content-projetos">
+        <div class="content-projeto">
+            <div class="projeto">
+                <img src="{% static 'img/order.png' %}" alt="Projeto 1">
+                <h2>Order Software</h2>
+                <p>Desenvolvimento de um sistema de gestão de pedidos, incluindo funcionalidades para armazenar dados de
+                    clientes e criar produtos. Esta aplicação incorpora operações de CRUD (Create, Read, Update,
+                    Delete),
+                    demonstrando meu sólido entendimento do framework Django e manipulação de banco de dados.</p>
+                <a href="https://order.fly.dev/" target="_blank"><button>Acessar<i
+                            class="fas fa-arrow-right"></i></button></a>
+            </div>
+            <div>
+                <span class="nome-projeto">Order Software</span>
+            </div>
+        </div>
+        <div id="content-project-2">
+            <div class="content-projeto">
+                <div>
+                    <span id="nome-projeto-2">Project Zone</span>
+                </div>
+                <div class="projeto">
+                    <img src="{% static 'img/projectzone.png' %}" alt="Projeto 2">
+                    <h2>Project Zone</h2>
+                    <p>Implementação de um sistema que permite aos professores agendar reservas de datashows para salas
+                        e
+                        horários
+                        específicos. Isso envolveu a criação de um sistema de agendamento e gerenciamento de
+                        reservas,incluindo
+                        o
+                        uso de calendários e manipulação de datas com Django e JavaScript.</p>
+                    <a href="https://projectzone.fly.dev/" target="_blank"><button>Acessar<i
+                                class="fas fa-arrow-right"></i></button></a>
+                </div>
+            </div>
+        </div>
+        <div class="content-projeto">
+            <div class="projeto">
+                <img src="{% static 'img/webscraping.png' %}" alt="Projeto 2">
+                <h2>Webscraping</h2>
+                <p>Desenvolvimento de uma aplicação especializada em extrair imagens, links e termos de sites, com a
+                    capacidade
+                    de recuperar dados de versões históricas a partir de 2010 até o ano atual. Este projeto demonstra
+                    minhas
+                    habilidades em web scraping,utilizando bibliotecas como Beautiful Soup e Requests em Python.</p>
+                <a href="https://webscraping.fly.dev/" target="_blank" id="habilidades"><button>Acessar<i
+                            class="fas fa-arrow-right"></i></button></a>
+            </div>
+            <div>
+                <span class="nome-projeto">WebScraping</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-3">
+    <h1 class="title-section">Minhas Habilidades</h1>
+    <div class="content-ferramentas">
+        <div class="ferramentas">
+            <div class="ferramenta">
+                <i class="fab fa-html5"></i>
+                <h2>HTML</h2>
+            </div>
+            <div class="ferramenta">
+                <i class="fab fa-css3-alt"></i>
+                <h2>CSS</h2>
+            </div>
+            <div class="ferramenta">
+                <i class="fab fa-js"></i>
+                <h2>JavaScript</h2>
+            </div>
+            <div class="ferramenta">
+                <i class="fab fa-python"></i>
+                <h2>Python</h2>
+            </div>
+            <div class="ferramenta">
+                <i class="fab fa-js"></i>
+                <h2>jQuery</h2>
+            </div>
+            <div class="ferramenta">
+                <i class="fab fa-monero"></i>
+                <h2>MongoDB</h2>
+            </div>
+            <div class="ferramenta">
+                <i class="fas fa-database"></i>
+                <h2>MySQL</h2>
+            </div>
+            <div class="ferramenta">
+                <i class="fas fa-code"></i>
+                <h2>Django</h2>
+            </div>
+        </div>
+        <div class="content-habilidade-desc">
+            <div class="habilidades-descricao">
+                <p>
+                    Como desenvolvedor fullstack, possuo habilidades abrangentes que abarcam desde a estruturação e
+                    estilização de páginas web utilizando <span class="highlighted-habilidades-desc">HTML</span> e <span
+                        class="highlighted-habilidades-desc">CSS</span>,
+                    até a implementação de funcionalidades dinâmicas e interativas com <span
+                        class="highlighted-habilidades-desc">JavaScript</span>.
+                    Além disso, sou proficiente em linguagens de programação como <span
+                        class="highlighted-habilidades-desc">Python</span>, e familiarizado com
+                    bibliotecas e frameworks populares como <span class="highlighted-habilidades-desc">jQuery</span> e
+                    <span class="highlighted-habilidades-desc">Django</span>.
+                    Minha experiência abrange a administração de bancos de dados <span
+                        class="highlighted-habilidades-desc">MySQL</span>
+                    e <span class="highlighted-habilidades-desc">MongoDB</span>,
+                    proporcionando uma visão completa do ciclo de vida de desenvolvimento de software.
+                </p>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

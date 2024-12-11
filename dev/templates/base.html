@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Titulo da pagina -->
+    {% block title%}
+    {% endblock %}
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Link Fontawesomefree -->
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <!-- Links extras -->
+    {% block extra_head %}
+    {% endblock %}
+</head>
+
+<body>
+    <div id="home"></div>
+    <div id="topo">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <header>
+        <nav class="Navbar">
+            <div class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </div>
+            <div class="rede-social">
+                <a href="https://github.com/Taylon23/" target="_blank"><i class="fab fa-github"></i></a>
+                <a
+                    href="https://www.linkedin.com/in/wemerson-fernandes-5b3115252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content%}
+
+        {% endblock %}
+    </main> 
+    <footer id="contato">
+        <div class="content-contato-desc">
+            <div class="contato">
+                <p class="title-contact">Informações de Contato </p>
+                <p>Wemerson Taylon M. Fernandes <i class="fas fa-user"></i></p>
+                <p>wemersontaylonn1212@gmail.com <i class="fas fa-envelope"></i></p>
+                <!-- Número de telefone (opcional) -->
+            </div>
+        </div>
+        <div class="desc-footer">
+            <p><span>FrontEnd</span> | <span>BackEnd</span> | <span>Developer</span></p>
+            <p>Desenvolvedor Fullstack</p>
+        </div>
+        <div class="direitos-autorais">
+            <p>&copy; Wemerson 2023</p>
+        </div>
+    </footer>
+</body>
+{% block script%}
+  
+{% endblock %}
+<script src="{% static 'js/scrollIntoView.js' %}"></script>
+<script src="{% static 'js/button_scroll.js.js' %}"></script>
+
+</html>
