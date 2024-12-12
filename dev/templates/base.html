@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/variables.css' %}">
     <!-- Titulo da pagina -->
     <title>{% block title%} {% endblock %}</title>
 
@@ -43,9 +44,9 @@
             <h1><span>Weme</span>rson</h1>
         </div>
         <div class="content-links-sections">
-          <a>Portfolio</a>
-          <a>Sobre mim</a>
-          <a>Projetos</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#about-me">Sobre mim</a>
+          <a href="#projetos">Projetos</a>
           <a>Educação</a>
         </div>
         <div class="contato-navbar">Meu contato</div>
@@ -61,4 +62,5 @@
   </body>
   {% block script%} {% endblock %}
   <script src="{% static 'js/link-active.js' %}"></script>
+  <!-- JS do Swiper -->
 </html>

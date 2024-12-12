@@ -10,7 +10,7 @@ html,
 body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
-  background-color: #f4f4f4;
+  background-color: var(--bg-light);
   scroll-behavior: smooth;
 }
 
@@ -18,20 +18,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
+  position: fixed;
   padding: 1em;
-  color: #fff;
-  background-color: #081526;
-  filter: blur(80%);
+  background-color: rgba(8, 21, 38, 0.85); /* Cor com transparência */
+  backdrop-filter: blur(8px); /* Efeito de desfoque no fundo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  z-index: 1000; /* Garante que fique acima do conteúdo */
 }
+
 
 .titulo h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: #BBB4BF;
-  display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: var(--bg-light);
   position: relative;
   cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.titulo h1:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, var(--primary-color), var(--bg-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .titulo h1::before {
@@ -41,7 +52,7 @@ body {
   left: 50%;
   width: 0;
   height: 3px;
-  background: linear-gradient(to right, #6093bf, #BBB4BF);
+  background: var(--primary-color);
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -50,30 +61,23 @@ body {
   left: 0;
 }
 
-.titulo h1:hover {
-  transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
-  color: transparent;
-  background: linear-gradient(90deg, #6093bf, #BBB4BF);
-  -webkit-background-clip: text;
-  background-clip: text; /* Efeito de gradiente no texto */
-}
-
 .titulo span {
-  color: #6093bf;
+  color: var(--primary-color);
 }
 
+/* Links */
 .content-links-sections {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 25%;
+  gap: 15px;
 }
 
 .content-links-sections a {
-  color: #fff;
+  color: var(--text-light);
   font-weight: bold;
   position: relative;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .content-links-sections a::after {
@@ -83,37 +87,39 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #6093bf;
+  background-color: var(--primary-color);
   transition: width 0.3s ease;
 }
 
-.content-links-sections a.active::after {
+.content-links-sections a.active::after,
+.content-links-sections a:hover::after {
   width: 100%;
 }
 
-.content-links-sections a.active {
-  color: #6093bf;
-}
-
-.content-links-sections a:hover::after {
-  width: 100%; /* Barra aparece ao passar o mouse */
-}
-
 .content-links-sections a:hover {
-  color: #6093bf; /* Muda a cor ao passar o mouse */
+  color: var(--primary-color);
 }
 
-.contato-navbar{
-  padding: .5em 1em;
-  background-color: #f1f1f1;
+/* Botão de contato */
+.contato-navbar {
+  padding: 0.5em 1em;
+  background-color: var(--bg-light);
   font-weight: bold;
   border-radius: 8px;
-  color: #081526;
-  transition: all .3s ease;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.contato-navbar:hover{
-  color: #f1f1f1;
-  background-color: #6093bf;
+.contato-navbar:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .titulo,
+  .contato-navbar {
+    display: none;
+  }
 }

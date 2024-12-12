@@ -1,10 +1,11 @@
-.titulo-descricao-img{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-  }
+.titulo-descricao-img {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  gap: 20px;
+}
 
 .content-titulo-descricao {
   width: 50%;
@@ -16,24 +17,17 @@
 
 .content-titulo-descricao h1 {
   font-size: 3em;
+  color: var(--bg-dark);
 }
 
 .content-titulo-descricao span {
-  color: #6093bf;
+  color: var(--primary-color);
 }
 
-.content-titulo-descricao p{
-    color: #333;
-    margin: 1em 0;
+.content-titulo-descricao p {
+  color: var(--text-color);
+  margin: 1em 0;
 }
-
-.content-img img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
 .content-curriculo-projetos {
   margin-top: 20px;
   display: flex;
@@ -52,30 +46,34 @@
 
 /* Estilo para o link de Projetos */
 .content-curriculo-projetos div:nth-child(1) a {
-  background-color: #6093bf;
-  border: solid 1px #6093bf;
+  background-color: var(--primary-color);
+  border: solid 1px var(--primary-color);
   font-weight: bold;
 }
 
 .content-curriculo-projetos div:nth-child(1) a:hover {
   background-color: #fff;
-  color: #081526;
+  color: var(--bg-dark);
   transform: scale(1.05);
 }
 
 /* Estilo para o link de Currículo */
 .content-curriculo-projetos div:nth-child(2) a {
-  background-color: #081526;
-  border: solid 1px #081526;
+  background-color: var(--bg-dark);
+  border: solid 1px var(--bg-dark);
   font-weight: bold;
 }
 
 .content-curriculo-projetos div:nth-child(2) a:hover {
   background-color: #fff;
-  color: #081526;
+  color: var(--bg-dark);
   transform: scale(1.05);
 }
-.content-img img{
+.content-img img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -84,4 +82,208 @@
 .content-img img:hover {
   filter: brightness(90%);
   transform: scale(1.05);
+}
+.content-img-responsive {
+  display: none;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+}
+.about-text h2 {
+  font-size: 2rem;
+}
+
+.about-text span {
+  color: var(--primary-color);
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.skills-list li {
+  padding: 0.5em 1em;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+  transform: scale(1.05);
+}
+
+.about-photo {
+  flex: 1;
+  text-align: center;
+}
+
+.about-photo img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 5px solid transparent; /* Inicialmente transparente */
+  background-image: linear-gradient(45deg, #6093bf, #081526, #6093bf);
+  background-clip: padding-box; /* Faz o gradiente aparecer na borda */
+  animation: border-glow 2s infinite; /* Adiciona uma animação */
+}
+
+/* Animação da borda brilhante */
+@keyframes border-glow {
+  0% {
+    box-shadow: 0 0 5px #6093bf, 0 0 10px #6093bf;
+  }
+  50% {
+    box-shadow: 0 0 15px #081526, 0 0 20px #6093bf;
+  }
+  100% {
+    box-shadow: 0 0 5px #6093bf, 0 0 10px #081526;
+  }
+}
+
+#projetos{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#projetos h1{
+  font-size: 2em;
+  margin: .5em 0;
+}
+
+.carousel-container {
+  position: relative;
+  width: 1100px; /* Largura de cada painel */
+  overflow: hidden; /* Adicionando overflow: hidden para esconder conteúdo que ultrapassa a largura */
+  background-color: #e0e0e0; /* Cor de fundo do contêiner do carrossel */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 4400px; /* Largura total do carrossel - 4 painéis * 1100px */
+}
+
+.panel {
+  width: 1100px;
+  height: 450px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #ccc; /* Cor da borda dos painéis */
+  border-radius: 10px; /* Adicionando bordas arredondadas */
+  overflow: hidden; /* Garantindo que a imagem não ultrapasse as bordas arredondadas */
+  background-color: #f8f8f8; /* Cor de fundo dos painéis */
+}
+.panel img{
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.panel img:hover{
+  transform: scale(1.05);
+}
+
+.panel p{
+  font-size: 1.1em;
+  color: var(--text-color);
+}
+
+.content {
+  padding: 10px;
+}
+
+.button-carrosel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: var(--bg-dark);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .content-img-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1em;
+  }
+  .content-img-responsive img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  .titulo-descricao-img {
+    height: auto;
+  }
+  .content-img img {
+    display: none;
+  }
+  .content-titulo-descricao h3 {
+    font-size: 1.5em;
+  }
+  .content-titulo-descricao h1 {
+    font-size: 2em;
+  }
+  .content-titulo-descricao {
+    width: 100%;
+  }
 }
