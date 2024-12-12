@@ -47,7 +47,7 @@
           <a href="#portfolio">Portfolio</a>
           <a href="#about-me">Sobre mim</a>
           <a href="#projetos">Projetos</a>
-          <a>Educação</a>
+          <a href="#educacao">Educação</a>
         </div>
         <div class="contato-navbar">Meu contato</div>
       </nav>
@@ -58,6 +58,32 @@
     {% block content %}
       
     {% endblock %}
+
+    
+    {% block footer %}
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="social-media">
+          <a href="https://github.com/Taylon23/" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/wemerson-fernandes-5b3115252/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:taylonedits@gmail.com" target="_blank" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p class="copyright">
+          &copy; 2024 Wemerson Fernandes. Todos os direitos reservados.
+        </p>
+        <p class="credit">
+          Desenvolvido por <a href="https://seuportifolio.com" target="_blank">Wemerson Fernandes</a>.
+        </p>
+      </div>
+    </footer>    
+    {% endblock %}
+      
       
   </body>
   {% block script%} {% endblock %}

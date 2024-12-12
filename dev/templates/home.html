@@ -1,14 +1,12 @@
-{% extends "base.html" %} 
-{% load static %} 
-{% block extra_head %}
+{% extends "base.html" %} {% load static %} {% block extra_head %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}" />
-{% endblock %} 
-{% block title%} Home {% endblock %} 
-{% block content %}
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+{% endblock %} {% block title%} Home {% endblock %} {% block content %}
+<div id="portfolio"></div>
 <div class="content-img-responsive">
   <img src="{% static 'img/img-dev.jpg' %}" />
 </div>
-<section id="portfolio" class="titulo-descricao-img">
+<section class="titulo-descricao-img">
   <div class="content-titulo-descricao">
     <h3>Olá</h3>
     <h1>Sou <span>Wemerson</span>, um Denvolvedor Backend</h1>
@@ -41,12 +39,12 @@
       <h2>Sobre <span>Mim</span></h2>
       <h1>Backend <span>Developer</span></h1>
       <p>
-        Sou desenvolvedor web com sólida experiência em desenvolvimento web. Formado em Técnico
-        de Informática, tenho uma base sólida em tecnologia e desenvolvimento de
-        soluções eficazes. Minha paixão é transformar ideias criativas em
-        projetos web funcionais e impactantes. Sou movido por desafios, sempre
-        em busca de aprender e adotar novas tecnologias para otimizar processos
-        e criar experiências digitais inovadoras.
+        Sou desenvolvedor web com sólida experiência em desenvolvimento web.
+        Formado em Técnico de Informática, tenho uma base sólida em tecnologia e
+        desenvolvimento de soluções eficazes. Minha paixão é transformar ideias
+        criativas em projetos web funcionais e impactantes. Sou movido por
+        desafios, sempre em busca de aprender e adotar novas tecnologias para
+        otimizar processos e criar experiências digitais inovadoras.
       </p>
       <h3>Minhas Habilidades</h3>
       <ul class="skills-list">
@@ -64,38 +62,111 @@
 
 <section id="projetos">
   <h1>Meus Projetos</h1>
-  <div class="carousel-container">
-    <div class="carousel" id="carousel">
-        <div class="panel">
-            <img src="{% static 'img/teste.jpg' %}" alt="">
-            <h1>Titulo 1</h1>
-            <p>Uma breve descrição do meu projeto</p>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="content-git-site-projeto">
+          <a href=""><i class="fab fa-github"></i></a>
+          <a href=""><i class="fas fa-globe"></i></a>
         </div>
-        <div class="panel">
-          <img src="{% static 'img/teste.jpg' %}" alt="">
-          <h1>Titulo 2</h1>
-          <p>Uma breve descrição do meu projeto</p>
+        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 1" />
+        <h2>Projeto 1</h2>
+        <p>
+          Descrição breve do Projeto 1. Um exemplo incrível de criatividade e
+          inovação.
+        </p>
+      </div>
+      <div class="swiper-slide">
+        <div class="content-git-site-projeto">
+          <a href=""><i class="fab fa-github"></i></a>
+          <a href=""><i class="fas fa-globe"></i></a>
         </div>
-        <div class="panel">
-          <img src="{% static 'img/teste.jpg' %}" alt="">
-          <h1>Titulo 3</h1>
-          <p>Uma breve descrição do meu projeto</p>
+        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 2" />
+        <h2>Projeto 2</h2>
+        <p>Descrição breve do Projeto 2. Um design elegante e funcional.</p>
+      </div>
+      <div class="swiper-slide">
+        <div class="content-git-site-projeto">
+          <a href=""><i class="fab fa-github"></i></a>
+          <a href=""><i class="fas fa-globe"></i></a>
         </div>
-        <div class="panel">
-          <img src="{% static 'img/teste.jpg' %}" alt="">
-          <h1>Titulo 4</h1>
-          <p>Uma breve descrição do meu projeto</p>
+        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 3" />
+        <h2>Projeto 3</h2>
+        <p>
+          Descrição breve do Projeto 3. Construído com as melhores práticas.
+        </p>
+      </div>
+      <div class="swiper-slide">
+        <div class="content-git-site-projeto">
+          <a href=""><i class="fab fa-github"></i></a>
+          <a href=""><i class="fas fa-globe"></i></a>
         </div>
-        
-        <!-- Adicione os outros três painéis semelhantes aqui -->
+        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 4" />
+        <h2>Projeto 4</h2>
+        <p>Descrição breve do Projeto 4. Uma solução poderosa e eficiente.</p>
+      </div>
+      <div class="swiper-slide">
+        <div class="content-git-site-projeto">
+          <a href=""><i class="fab fa-github"></i></a>
+          <a href=""><i class="fas fa-globe"></i></a>
+        </div>
+        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 5" />
+        <h2>Projeto 5</h2>
+        <p>
+          Descrição breve do Projeto 5. Um projeto feito com paixão e atenção
+          aos detalhes.
+        </p>
+      </div>
     </div>
-    <button class="prev button-carrosel" onclick="changePanel(-1)"><i class="fas fa-arrow-circle-left"></i></button>
-    <button class="next button-carrosel" onclick="changePanel(1)"><i class="fas fa-arrow-circle-right"></i></button>
-</div>
+    <!-- Navegação -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
 </section>
+<section id="educacao">
+  <h1>Minha Formação</h1>
+  <div class="content-educacao-img">
+    <div class="educacao-container">
+      <div class="educacao-item">
+        <h2>Formação: Tecnico de Informática para Internet</h2>
+        <p>
+          Curso focado em desenvolvimento web, banco de dados, redes e
+          tecnologias voltadas para a criação de aplicações eficientes e
+          modernas para a internet.
+        </p>
+      </div>
+      <h3>Habilidades Adiquiridas</h3>
+      <ul class="skills-list">
+        <li>Lógica de Programação</li>
+        <li>Design Gráfico</li>
+        <li>Banco de Dados</li>
+        <li>Desenvolvimento Web I</li>
+        <li>Programação Web I</li>
+        <li>Programação Web II</li>
+        <li>Manutenção de Computadores</li>
+        <li>Sistemas Operacionais</li>
+        <li>Gestão de Projetos</li>
+        <li>Segurança da Informação</li>
+      </ul>
+    </div>
+    <img src="{% static 'img/educacao.png' %}" id="img-educacao" alt="" />
+  </div>
+</section>
+{% endblock %} {% block script %}
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".swiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
 {% endblock %}
-
-{% block script %}
-  <script src="{% static 'js/carrosel.js' %}"></script>
-{% endblock %}
-  

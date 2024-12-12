@@ -27,7 +27,6 @@ body {
   z-index: 1000; /* Garante que fique acima do conteúdo */
 }
 
-
 .titulo h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -114,6 +113,53 @@ body {
 .contato-navbar:hover {
   background-color: var(--primary-color);
   color: var(--text-light);
+}
+
+#footer {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  font-size: 1.7rem;
+  color: var(--footer-text);
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+.copyright,
+.credit {
+  margin: 5px 0;
+}
+
+.credit a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.credit a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 /* Responsividade */
