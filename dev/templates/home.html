@@ -1,7 +1,11 @@
-{% extends "base.html" %} {% load static %} {% block extra_head %}
+{% extends "base.html" %} 
+{% load static %} 
+{% block extra_head %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-{% endblock %} {% block title%} Home {% endblock %} {% block content %}
+{% endblock %} 
+{% block title%} Home {% endblock %} 
+{% block content %}
 <div id="portfolio"></div>
 <div class="content-img-responsive">
   <img src="{% static 'img/img-dev.jpg' %}" />
@@ -21,7 +25,7 @@
         <a>Contate-me <i class="fas fa-envelope"></i></a>
       </div>
       <div>
-        <a>Curriculo <i class="fas fa-download"></i></a>
+        <a href="https://drive.google.com/file/d/1ltYscKxt2Pi790hC30OnpePeWY8R-EZU/view?usp=sharing">Curriculo <i class="fas fa-download"></i></a>
       </div>
     </div>
   </div>
@@ -66,55 +70,63 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="content-git-site-projeto">
-          <a href=""><i class="fab fa-github"></i></a>
+          <a href="https://github.com/Taylon23/ecowatt"><i class="fab fa-github"></i></a>
           <a href=""><i class="fas fa-globe"></i></a>
         </div>
-        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 1" />
-        <h2>Projeto 1</h2>
+        <img src="{% static 'img/ecowatt.png' %}" alt="Imagem Projeto 1" />
+        <h2>EcoWatt</h2>
         <p>
-          Descrição breve do Projeto 1. Um exemplo incrível de criatividade e
-          inovação.
+          Desenvolvi um sistema de economia de energia que ajuda os usuários a
+          monitorar seus equipamentos e calcular o consumo mensal. O sistema
+          também oferece sugestões e melhorias para otimizar o uso de energia.
         </p>
       </div>
       <div class="swiper-slide">
         <div class="content-git-site-projeto">
-          <a href=""><i class="fab fa-github"></i></a>
+          <a href="https://github.com/Taylon23/painel_esus.git"><i class="fab fa-github"></i></a>
           <a href=""><i class="fas fa-globe"></i></a>
         </div>
-        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 2" />
-        <h2>Projeto 2</h2>
-        <p>Descrição breve do Projeto 2. Um design elegante e funcional.</p>
-      </div>
-      <div class="swiper-slide">
-        <div class="content-git-site-projeto">
-          <a href=""><i class="fab fa-github"></i></a>
-          <a href=""><i class="fas fa-globe"></i></a>
-        </div>
-        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 3" />
-        <h2>Projeto 3</h2>
+        <img src="{% static 'img/api.png' %}" alt="Imagem Projeto 2" />
+        <h2>Painel SUS</h2>
         <p>
-          Descrição breve do Projeto 3. Construído com as melhores práticas.
+          O Painel eSUS é um sistema para visualização e análise de dados de saúde provenientes do eSUS-AB (Sistema de Informação em Saúde para Atenção Básica). Ele permite aos profissionais de saúde e gestores monitorar indicadores de saúde.
         </p>
       </div>
       <div class="swiper-slide">
         <div class="content-git-site-projeto">
-          <a href=""><i class="fab fa-github"></i></a>
+          <a href="https://github.com/Taylon23/petshop.git"><i class="fab fa-github"></i></a>
           <a href=""><i class="fas fa-globe"></i></a>
         </div>
-        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 4" />
-        <h2>Projeto 4</h2>
-        <p>Descrição breve do Projeto 4. Uma solução poderosa e eficiente.</p>
+        <img src="{% static 'img/petshop.png' %}" alt="Imagem Projeto 3" />
+        <h2>PetShop</h2>
+        <p>
+          Um sistema que gerencia doações locais, permitindo que as pessoas
+          publiquem anúncios de animais disponíveis para adoção.
+        </p>
       </div>
       <div class="swiper-slide">
         <div class="content-git-site-projeto">
-          <a href=""><i class="fab fa-github"></i></a>
+          <a href="https://github.com/Taylon23/tech_shop.git"><i class="fab fa-github"></i></a>
           <a href=""><i class="fas fa-globe"></i></a>
         </div>
-        <img src="{% static 'img/teste.jpg' %}" alt="Imagem Projeto 5" />
-        <h2>Projeto 5</h2>
+        <img src="{% static 'img/techshop.png' %}" alt="Imagem Projeto 4" />
+        <h2>Tech Shop</h2>
         <p>
-          Descrição breve do Projeto 5. Um projeto feito com paixão e atenção
-          aos detalhes.
+          Desenvolvi um sistema para que os usuários possam adicionar produtos
+          de tecnologia para venda. O sistema foi projetado para atender às
+          necessidades de uma pessoa que desejava gerenciar seu próprio negócio.
+        </p>
+      </div>
+      <div class="swiper-slide">
+        <div class="content-git-site-projeto">
+          <a href="https://github.com/Taylon23/portfolio.git"><i class="fab fa-github"></i></a>
+          <a href=""><i class="fas fa-globe"></i></a>
+        </div>
+        <img src="{% static 'img/portifolio.png' %}" alt="Imagem Projeto 5" />
+        <h2>Meu Portfólio</h2>
+        <p>
+          Um portfólio pessoal que exibe minhas habilidades, projetos e
+          experiência, com foco em design responsivo e usabilidade.
         </p>
       </div>
     </div>
