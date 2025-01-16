@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)7t((dy7#f0_*o=wy$xhj01ed_$7^5bcii2=2)hg4i@0qz+pkx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['portfoliowt.pythonanywhere.com']
 
 
 # Application definition
@@ -118,12 +118,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+""" STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",  # ou o caminho onde seus arquivos estão
-]
+] """
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+
+MEDIA_ROOT = '/home/portfoliowt/mysite/media'
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/portfoliowt/mysite/static'
+STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
